@@ -28,20 +28,12 @@ class Chatz < Formula
     end
   end
 
-  # depends_on "go" => :build
-
   def install
-    # tag = version.to_s
-    # commit = Utils.git_short_head
-    # tag = "v1.1.2"
-    # commit = "none"
-    # system "make", "build", "VERSION=#{tag}", "COMMIT=#{commit}"
     bin.install "build/chatz"
     man1.install "man/chatz.1"
   end
 
   test do
     assert_match "chatz", shell_output("#{bin}/chatz --version")
-    system "false"
   end
 end
