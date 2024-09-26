@@ -28,7 +28,7 @@ class Chatz < Formula
     end
   end
 
-  depends_on "go" => :build
+  # depends_on "go" => :build
 
   def install
     # tag = version.to_s
