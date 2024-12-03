@@ -6,26 +6,26 @@ class Gozen < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.1/gozen-darwin-arm64.tar.gz"
-      sha256 "f846b32734cc49499a56a6f27abeb81bd39b38ac90fb538682e27c737fd76856"
+      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.2/gozen-darwin-arm64.tar.gz"
+      sha256 "d621a5f6a1075be282eb86e1e585833a1b13d6e62fb03beb6c5ee9289672532a"
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.1/gozen-darwin-amd64.tar.gz"
-      sha256 "f52646db656d08457563bb2870a363c151845e86556c14648d5bbc28f76be434"
+      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.2/gozen-darwin-amd64.tar.gz"
+      sha256 "4ab29ca47eb895b73061fa91b364e3db4b76d3815e23b75cf939d67641d565cf"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_32_bit?
-        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.1/gozen-linux-arm.tar.gz"
-        sha256 "332de8f362db617195a399e68412bd63f74910a7e5396b7c2f83fa5bf4bfc0a1"
+        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.2/gozen-linux-arm.tar.gz"
+        sha256 "21a117ae69d701ecdc671609e585fd092b7d3526487e33adc83f188a552a0d53"
       else
-        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.1/gozen-linux-arm64.tar.gz"
-        sha256 "44468a244f923cb7900db2f0fb86b84048fde5979bb9602296a790420377a812"
+        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.2/gozen-linux-arm64.tar.gz"
+        sha256 "3640f612745bfd42dc57c6727b29d036467a50adfdacb8121595dc3468e72bba"
       end
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.1/gozen-linux-amd64.tar.gz"
-      sha256 "332de8f362db617195a399e68412bd63f74910a7e5396b7c2f83fa5bf4bfc0a1"
+      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.2/gozen-linux-amd64.tar.gz"
+      sha256 "76106e3fe5539a564e49cb42ab26d8de1c8a8c49053c094ed0885479b4e98915"
     end
   end
 
