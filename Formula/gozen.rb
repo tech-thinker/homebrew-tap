@@ -1,31 +1,31 @@
 class Gozen < Formula
   desc "gozen is a simplified golang MVC framework to generate projects and components."
   homepage "https://github.com/tech-thinker/gozen"
-  version "v0.1.3"
+  version "v0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.3/gozen-darwin-arm64.tar.gz"
-      sha256 "d7f7cc8c13404cdb0c17fbb8c598daa97155f99130195e4bfb9b0b4fe96b8195"
+      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.4/gozen-darwin-arm64.tar.gz"
+      sha256 "02d0c040ffebc5d20a195623e5dae99886970c8e82f3b00d0042d7fd2094d8a2"
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.3/gozen-darwin-amd64.tar.gz"
-      sha256 "a475233a2560919fff26643f1cf77f27f1d1621dc2f0a85faab53063659edc6c"
+      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.4/gozen-darwin-amd64.tar.gz"
+      sha256 "61a193302ec06914dd9e6f5ef49b1cb4c0114f1ef4d356abcd18cf01065c127b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_32_bit?
-        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.3/gozen-linux-arm.tar.gz"
-        sha256 "7f1b04789c5401dd6fc8b826e0cdf16f4847522bb6f0e70e8389bbed9b3af59e"
+        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.4/gozen-linux-arm.tar.gz"
+        sha256 "0604f9031f6465743f935ddf35731fe428f543755d780f47f5ced1e2fb382272"
       else
-        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.3/gozen-linux-arm64.tar.gz"
-        sha256 "6ba29dcc64172b83297f87791c309c0e3e2ffb533d0521ee424f7356afb23cc2"
+        url "https://github.com/tech-thinker/gozen/releases/download/v0.1.4/gozen-linux-arm64.tar.gz"
+        sha256 "cad0e2bb79678c1ae645eb4ea25871a500b3a584506bf0d70ec245d5c89d2c6f"
       end
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.3/gozen-linux-amd64.tar.gz"
-      sha256 "dc266d743a9871203445a77a128b9829ac2da0512d23f2dad0214c6bcfbeccbf"
+      url "https://github.com/tech-thinker/gozen/releases/download/v0.1.4/gozen-linux-amd64.tar.gz"
+      sha256 "45ea31438c9439e8c1230a79e85c982d2f655d83875f87f17dc9038f4cc27f81"
     end
   end
 
