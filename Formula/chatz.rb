@@ -1,31 +1,31 @@
 class Chatz < Formula
-  desc "chatz is a versatile messaging app designed to send notifications to Google Chat, Slack, Discord, Telegram and Redis."
+  desc "chatz is a versatile messaging app designed to send notifications to Google Chat, Slack, Discord, Telegram, SMTP and Redis."
   homepage "https://github.com/tech-thinker/chatz"
-  version "v1.1.3"
+  version "v1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tech-thinker/chatz/releases/download/v1.1.3/chatz-darwin-arm64.tar.gz"
-      sha256 "6fcf9731f8b83653a9aa410d5ba90da97252d8cabf85010c56daf5fbf3a22f5d"
+      url "https://github.com/tech-thinker/chatz/releases/download/v1.2.0/chatz-darwin-arm64.tar.gz"
+      sha256 "d3bc0cf0a6c1da58cd9d617abe1f9ff69ea5cb57d5091f23ed09411fa6c4cbef"
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/chatz/releases/download/v1.1.3/chatz-darwin-amd64.tar.gz"
-      sha256 "01a43ca536f284ab881999e12860976c96ca2712869dc3f005e7dcb332717ccc"
+      url "https://github.com/tech-thinker/chatz/releases/download/v1.2.0/chatz-darwin-amd64.tar.gz"
+      sha256 "ec5705f0876716da7a9112384140bd9f334e3bd8d0696b857ccfb8a3e89270a0"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_32_bit?
-        url "https://github.com/tech-thinker/chatz/releases/download/v1.1.3/chatz-linux-arm.tar.gz"
-        sha256 "4837e7526a421ceb36aca4635c2e51a98fd7dd7066fe71ea94320d478d7d3154"
+        url "https://github.com/tech-thinker/chatz/releases/download/v1.2.0/chatz-linux-arm.tar.gz"
+        sha256 "09933dd6ff037c6ac55b17c8b021e88bb708368612a31b63df606b8bbcbb395d"
       else
-        url "https://github.com/tech-thinker/chatz/releases/download/v1.1.3/chatz-linux-arm64.tar.gz"
-        sha256 "b63807fcaa28d41d716f532ea3cc9868da92dbeb06d04a465a3036badb0c11df"
+        url "https://github.com/tech-thinker/chatz/releases/download/v1.2.0/chatz-linux-arm64.tar.gz"
+        sha256 "beea030ccb13105cdc90ad3f2faa24375989320b16649489ab3724c9d4594302"
       end
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/chatz/releases/download/v1.1.3/chatz-linux-amd64.tar.gz"
-      sha256 "56fc8296e43b57e6630003b1f1f5d69493f05dd62ae3c90dea5d93ffabda4336"
+      url "https://github.com/tech-thinker/chatz/releases/download/v1.2.0/chatz-linux-amd64.tar.gz"
+      sha256 "8b32f94301dac186454f1b95313071d0cf05191fbaa5d48131f968df082c6299"
     end
   end
 
