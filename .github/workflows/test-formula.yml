@@ -1,0 +1,50 @@
+name: Test Homebrew Formulas
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      # Set up Homebrew
+      - name: Set up Homebrew
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential curl file git
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+      # Tap tech-thinker/tap
+      - name: Tap tech-thinker/tap
+        run: |
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          brew tap tech-thinker/tap
+
+      # Install and test all formulas in the Formula directory
+      - name: Test all formulas
+        run: |
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          # Find all formula files in the Formula directory
+          FORMULAS=$(find Formula -name "*.rb")
+
+          # Loop through each formula
+          for formula in $FORMULAS; do
+            formula_name=$(basename $formula .rb)
+            echo "Testing $formula_name..."
+            brew install tech-thinker/tap/$formula_name
+            brew test tech-thinker/tap/$formula_name
+            brew uninstall tech-thinker/tap/$formula_name
+          done
+
