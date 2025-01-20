@@ -43,8 +43,7 @@ jobs:
           for formula in $FORMULAS; do
             formula_name=$(basename $formula .rb)
             echo "Testing $formula_name..."
-            brew install tech-thinker/tap/$formula_name
-            brew test tech-thinker/tap/$formula_name
-            brew uninstall tech-thinker/tap/$formula_name
+            brew install --build-from-source ./Formula/$formula_name.rb
+            brew test ./Formula/$formula_name.rb
+            brew uninstall $formula_name
           done
-

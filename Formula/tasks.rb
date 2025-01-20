@@ -44,4 +44,9 @@ class Tasks < Formula
       end
     end
   end
+
+  test do
+    # Check if the `tasks` binary executes and displays the help message
+    assert_match "tasks", shell_output("#{bin}/tasks version")
+  end
 end
