@@ -1,7 +1,7 @@
 class Telepath < Formula
   desc "telepath is a powerful CLI tool for secure port forwarding with support for multiple jump hosts and flexible authentication."
   homepage "https://github.com/tech-thinker/telepath"
-  version "v1.0.0"
+  version "GPL-3.0-only"
   license "MIT"
 
   on_macos do
