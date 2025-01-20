@@ -44,4 +44,9 @@ class Sws < Formula
       end
     end
   end
+
+  test do
+    # Check if the `sws` binary executes and displays the help message
+    assert_match "sws", shell_output("#{bin}/sws --version")
+  end
 end

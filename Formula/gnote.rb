@@ -45,4 +45,9 @@ class Gnote < Formula
       end
     end
   end
+
+  test do
+    # Check if the `gnote` binary executes and displays the help message
+    assert_match "Version", shell_output("#{bin}/gnote version")
+  end
 end
