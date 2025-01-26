@@ -7,10 +7,10 @@ class Telepath < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/tech-thinker/telepath/releases/download/v1.0.1/telepath-darwin-arm64.tar.gz"
-      sha256 "7aaea816ab91b193b3703f8e470a03164deb1a4cc50a126aa8fad23a43551047"
+      sha256 "818c7f237f961b0eb935640e471e2ba420a1cece0ad325d57003643d3ecb2844"
     elsif Hardware::CPU.intel?
       url "https://github.com/tech-thinker/telepath/releases/download/v1.0.1/telepath-darwin-amd64.tar.gz"
-      sha256 "f6a0984c4a3e52948cca18ab0be9e74cefe2b45c6855344df1a17341b5ed8129"
+      sha256 "5ef336697a43a11375e882f85e0bd86e3585019289683af3feb9472c2bb8e2aa"
     end
   end
 
@@ -18,14 +18,14 @@ class Telepath < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_32_bit?
         url "https://github.com/tech-thinker/telepath/releases/download/v1.0.1/telepath-linux-arm.tar.gz"
-        sha256 "0110f41ea2f68c083dcf8e5ae85cca84fe52861eba7a5a0e0405260378522f89"
+        sha256 "4249fde2a685329591ec9e9e529b1e9151478c1f02ea333500dc3583544e2c92"
       else
         url "https://github.com/tech-thinker/telepath/releases/download/v1.0.1/telepath-linux-arm64.tar.gz"
-        sha256 "45a2d36b960c534f549742d7454de6010facc1fc99e2de350d4cfdaea9aef8d0"
+        sha256 "fdc718f66753e28aa7981254a8c7b1900f453aefd7b5584ebc88c3f74ba37d37"
       end
     elsif Hardware::CPU.intel?
       url "https://github.com/tech-thinker/telepath/releases/download/v1.0.1/telepath-linux-amd64.tar.gz"
-      sha256 "e86019f3b567bd026375e54f06fc82cbdeb0a7f600f1f0f3693c2656bc216557"
+      sha256 "06d38563f8a309c4950a357aae92a768565b39d937306e1c8448c4f095bb97f4"
     end
   end
 
