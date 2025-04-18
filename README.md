@@ -21,7 +21,7 @@ brew tap tech-thinker/tap
 Once you've added the tap, you can install any of the available packages with:
 
 ```bash
-brew install package-name
+brew install <package-name>
 ```
 
 ### Contributing
@@ -30,10 +30,11 @@ We welcome contributions!
 
 If you have a package you'd like to add or improve, please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them.
-4. Submit a pull request detailing your changes.
+1. Go to the repository [tech-thinker/homebrew-tap](https://github.com/tech-thinker/homebrew-tap).
+2. Fork the repository.
+3. Create a new branch for your feature or bug fix.
+4. Make your changes and commit them.
+5. Submit a pull request detailing your changes.
 
 ### License
 
