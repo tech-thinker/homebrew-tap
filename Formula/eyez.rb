@@ -10,7 +10,7 @@ class Eyez < Formula
       sha256 "14f53db91f5b411cfe530aa2070ceedf841436ba5c69bd63fe05d1ed2c252312"
     elsif Hardware::CPU.intel?
       url "https://github.com/tech-thinker/eyez/releases/download/v1.0.0/eyez-darwin-amd64.tar.gz"
-      sha256 "ebcac257373efb066bcd66fcb30f944438eec7da5d11e3342ffdb0817210aed9"
+      sha256 "707c7e85694a45dd557ad63d309c4fc9306244ef03e426aa16920272423ed039"
     end
   end
 
