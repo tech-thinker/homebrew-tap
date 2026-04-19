@@ -7,10 +7,10 @@ class Chatz < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/tech-thinker/chatz/releases/download/v1.2.3/chatz-darwin-arm64.tar.gz"
-      sha256 "412b1c90002b220cb3a931c9e82091ca82c94cd311de5339bee08408350001d7"
+      sha256 "ba32358fd6fea6578c3359bfe7408577d7db075f649778b4fb9a679c2a4aa2d1"
     elsif Hardware::CPU.intel?
       url "https://github.com/tech-thinker/chatz/releases/download/v1.2.3/chatz-darwin-amd64.tar.gz"
-      sha256 "015e9c9fb1bd4a5c153482ff0f1dfc4adac47e19c5fff112f248b25f9de53c29"
+      sha256 "547f1b1ecfa16200c61050765f55f4690ac2a1389528c11a12d22b98e301d844"
     end
   end
 
@@ -18,14 +18,14 @@ class Chatz < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_32_bit?
         url "https://github.com/tech-thinker/chatz/releases/download/v1.2.3/chatz-linux-arm.tar.gz"
-        sha256 "19d845dbe32109de57a770a8af7c08f7640c5d4aed755d6e17ea6f54435857ff"
+        sha256 "0c9680a4da0f003675a9eea51504244774c0f72ffbc973dbaa6d303b7062b437"
       else
         url "https://github.com/tech-thinker/chatz/releases/download/v1.2.3/chatz-linux-arm64.tar.gz"
-        sha256 "d611f4f21a4fc6f3ca28b1acb59c4879093fdbd1ff11527ae7981e3fef103c5b"
+        sha256 "1fa756c78cb1dbaec0d32e00ce753dfd7fbba369e0c8103ba1ba19eebdebacbc"
       end
     elsif Hardware::CPU.intel?
       url "https://github.com/tech-thinker/chatz/releases/download/v1.2.3/chatz-linux-amd64.tar.gz"
-      sha256 "a14a1083768b0bf8f207e3f854786af76e68f8b62cff099834fa5574b5ff1596"
+      sha256 "a18ca02b8fbd2fbe3353f66b9a990603dd05da99ed9ed628a1118e35dfb9b3b6"
     end
   end
 
