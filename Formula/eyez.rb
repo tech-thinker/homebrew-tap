@@ -1,31 +1,31 @@
 class Eyez < Formula
   desc "eyez - is the powerful CLI tool for viewing image in the terminal (Mostly any terminal)."
   homepage "https://github.com/tech-thinker/eyez"
-  version "v1.0.0"
+  version "v1.1.0"
   license "GPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tech-thinker/eyez/releases/download/v1.0.0/eyez-darwin-arm64.tar.gz"
-      sha256 "14f53db91f5b411cfe530aa2070ceedf841436ba5c69bd63fe05d1ed2c252312"
+      url "https://github.com/tech-thinker/eyez/releases/download/v1.1.0/eyez-darwin-arm64.tar.gz"
+      sha256 "606e3f44e81c9a8dd715119f0883a017b1dfa098991f9fff4868c7a7e80a8928"
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/eyez/releases/download/v1.0.0/eyez-darwin-amd64.tar.gz"
-      sha256 "707c7e85694a45dd557ad63d309c4fc9306244ef03e426aa16920272423ed039"
+      url "https://github.com/tech-thinker/eyez/releases/download/v1.1.0/eyez-darwin-amd64.tar.gz"
+      sha256 "425aaf57786bec003c8e223f00a0d1a4534e7c13271e5721156e5a447d01c2db"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_32_bit?
-        url "https://github.com/tech-thinker/eyez/releases/download/v1.0.0/eyez-linux-arm.tar.gz"
-        sha256 "c7ee66fb4d9aefde0916deb3a0172bf887947d52c1c73874110a736872f1af31"
+        url "https://github.com/tech-thinker/eyez/releases/download/v1.1.0/eyez-linux-arm.tar.gz"
+        sha256 "2f89db946e4477b6cf68c51856b583bdf3018865d0c39a98925072e81145810b"
       else
-        url "https://github.com/tech-thinker/eyez/releases/download/v1.0.0/eyez-linux-arm64.tar.gz"
-        sha256 "8b0ba94d3258fa6279b615b59469e6047934ca749d31dad61836d549e55ea310"
+        url "https://github.com/tech-thinker/eyez/releases/download/v1.1.0/eyez-linux-arm64.tar.gz"
+        sha256 "b0effc3d5e7aa7430d666f944ea31d74c2103f8325cebd73121d5d7542ced649"
       end
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/eyez/releases/download/v1.0.0/eyez-linux-amd64.tar.gz"
-      sha256 "c45af32ce02cec584434cbad0579b334f24aaf94f594a9ad67659d75a359f4e8"
+      url "https://github.com/tech-thinker/eyez/releases/download/v1.1.0/eyez-linux-amd64.tar.gz"
+      sha256 "1a84bf5142374861263014cfb0a12bba30b0173cb8ea992d11587b90c59c6887"
     end
   end
 
@@ -35,7 +35,7 @@ class Eyez < Formula
   end
 
   test do
-    # output = shell_output("#{bin}/eyez --version")
-    # refute_empty output.strip
+    output = shell_output("#{bin}/eyez --version")
+    refute_empty output.strip
   end
 end
