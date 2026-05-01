@@ -1,31 +1,31 @@
 class Telepath < Formula
   desc "telepath is a powerful CLI tool for secure port forwarding with support for multiple jump hosts and flexible authentication."
   homepage "https://github.com/tech-thinker/telepath"
-  version "v2.0.0"
+  version "v2.1.0"
   license "GPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tech-thinker/telepath/releases/download/v2.0.0/telepath-darwin-arm64.tar.gz"
-      sha256 "df957ea4c52855786893a411ebf4c585f743b968a8cb39696e5950bdadeaf9e1"
+      url "https://github.com/tech-thinker/telepath/releases/download/v2.1.0/telepath-darwin-arm64.tar.gz"
+      sha256 "02ddcc5ba77a545a704d27410f1a553420f8b7035148d85dbb00df4da67e9015"
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/telepath/releases/download/v2.0.0/telepath-darwin-amd64.tar.gz"
-      sha256 "ebcac257373efb066bcd66fcb30f944438eec7da5d11e3342ffdb0817210aed9"
+      url "https://github.com/tech-thinker/telepath/releases/download/v2.1.0/telepath-darwin-amd64.tar.gz"
+      sha256 "9c6032a529f8468b9faaace99e67a3f1ec627e3227eca2ab04a194bb34441613"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       if Hardware::CPU.is_32_bit?
-        url "https://github.com/tech-thinker/telepath/releases/download/v2.0.0/telepath-linux-arm.tar.gz"
-        sha256 "02d628176c858028bcdffa0f5e22f34c2816459cd7b5cb41162ec139e18cfc5e"
+        url "https://github.com/tech-thinker/telepath/releases/download/v2.1.0/telepath-linux-arm.tar.gz"
+        sha256 "d697063cde692138413efd6b5f506e463108aa8a2be7bfa12331e99309c5c0ff"
       else
-        url "https://github.com/tech-thinker/telepath/releases/download/v2.0.0/telepath-linux-arm64.tar.gz"
-        sha256 "052fb77cc0bf274f1fd3e7e2b0f3d2812b7b8f95287f8ab678a32a56f4ef3c4f"
+        url "https://github.com/tech-thinker/telepath/releases/download/v2.1.0/telepath-linux-arm64.tar.gz"
+        sha256 "58da6a201575b0c0ce2c599415509f117e029402a87b49aa6fb806945fa6c334"
       end
     elsif Hardware::CPU.intel?
-      url "https://github.com/tech-thinker/telepath/releases/download/v2.0.0/telepath-linux-amd64.tar.gz"
-      sha256 "e9ee34e3942e0af374f7ddce4d0c49186d18ec7b7ea57608b98c754d06df589c"
+      url "https://github.com/tech-thinker/telepath/releases/download/v2.1.0/telepath-linux-amd64.tar.gz"
+      sha256 "73ab70e94d63acad8c8eb939079c5c7eac72d601e07a5eb281f19b319b6bc850"
     end
   end
 
